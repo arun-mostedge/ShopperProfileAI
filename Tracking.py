@@ -78,7 +78,7 @@ elif choice == "Webcam":
            cam = cv2.VideoCapture(url)
         else:
             st.error('You had not enterd the IP address url. Cannot show you live feed.', icon="🚨")
-
+    print(cam.isOpened())
     stop_button_pressed = st.button("Stop")
     while cam.isOpened() and not stop_button_pressed:
         cam.set(cv2.CAP_PROP_FRAME_WIDTH, 740)
