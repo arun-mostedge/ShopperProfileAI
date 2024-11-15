@@ -65,10 +65,10 @@ elif choice == "Webcam":
     cam = None
     if accesspoint == "Webcam":
         webcamno = st.number_input('Number of webcam to add, incase you had multiple webcam attached with your device:',min_value=0,max_value=3,step=1)
-        if webcamno != None:
-            cam = cv2.VideoCapture(int(webcamno))
-        else:
-            cam = cv2.VideoCapture(0)
+        #if webcamno != None:
+        #    cam = cv2.VideoCapture(int(webcamno))
+        #else:
+        cam = cv2.VideoCapture(0)
 
     elif (accesspoint == "Static IP Camera") or (accesspoint == "Mobile IP Camera"):
         #'https://192.168.1.41:8080/video'
