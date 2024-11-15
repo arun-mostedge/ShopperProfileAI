@@ -79,7 +79,8 @@ elif choice == "Webcam":
         else:
             st.error('You had not enterd the IP address url. Cannot show you live feed.', icon="🚨")
 
-    if cam != None:
+    stop_button_pressed = st.button("Stop")
+    while cam.isOpened() and not stop_button_pressed:
         cam.set(cv2.CAP_PROP_FRAME_WIDTH, 740)
         cam.set(cv2.CAP_PROP_FRAME_HEIGHT, 780)
         add_btn = st.button("Add", key="Add_btn")
