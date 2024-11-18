@@ -5,6 +5,7 @@ cachetools==5.5.0
 certifi==2024.8.30
 charset-normalizer==3.4.0
 click==8.1.7
+camera_input_live==0.2.0
 entrypoints==0.4
 face_recognition @ git+https://github.com/thetoby9944/face_recognition
 face_recognition_models==0.3.0
